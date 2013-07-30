@@ -13,6 +13,10 @@ type FuncDiffer interface {
 	Differ
 }
 
+type Evaler interface {
+	Eval(float64) (f, g float64)
+}
+
 type BasicFunc func(float64) float64
 
 func (f BasicFunc) Function() func(float64) float64 {
